@@ -1,0 +1,141 @@
+@import '../../stylesUtils/variable.scss';
+
+.calendar-component {
+  position: relative;
+  padding: 20px 20px 35px;
+
+  background-color: $white-bg-color;
+
+  &__title {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.calendar-event {
+  padding: 7px 14px;
+
+  font-size: 13px;
+  color: $secondary-font-color;
+}
+
+//----toolbar----//
+.rbc-toolbar-label {
+  font-size: 18px;
+  color: $primary-font-color;
+}
+
+.rbc-toolbar {
+  margin-bottom: 20px;
+
+  & button {
+    padding: 8px 16px;
+
+    font-size: 13px;
+    color: $primary-font-color;
+    border-color: #d7dae2;
+
+    &:active,
+    &.rbc-active {
+      background-image: none;
+      box-shadow: none;
+      color: $blue-color;
+      background-color: transparent;
+      border-color: #d7dae2;
+
+      &:hover,
+      &:focus {
+        color: $blue-color;
+        background-color: transparent;
+        border-color: #d7dae2;
+      }
+    }
+
+    &:focus {
+      color: $blue-color;
+      background-color: transparent;
+      border-color: #d7dae2;
+    }
+
+    &:hover {
+      color: $blue-color;
+      background-color: transparent;
+      border-color: #d7dae2;
+    }
+  }
+}
+
+.rbc-btn-group {
+  box-shadow: 0px 2px 3px #0000000d;
+}
+
+//-----table header-----//
+
+.rbc-month-header {
+  background-color: #eaf0f4;
+}
+
+.rbc-header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.27;
+
+  color: #a3a6b4;
+
+  border-bottom: 1px solid $table-border-color;
+
+  & + & {
+    border-left: 1px solid transparent;
+  }
+}
+
+//-----month-----//
+.rbc-month-row {
+  & + & {
+    border-top: 1px solid $table-border-color;
+  }
+}
+
+.rbc-day-bg {
+  & + & {
+    border-left: 1px solid $table-border-color;
+  }
+
+  .rbc-rtl & + & {
+    border-right: 1px solid $table-border-color;
+  }
+}
+
+.rbc-today {
+  background-color: #eaf0f4;
+}
+
+.rbc-day-bg {
+  cursor: pointer;
+
+  &.rbc-off-range-bg {
+    background-color: transparent;
+  }
+}
+
+.rbc-date-cell {
+  button {
+    font-size: 15px;
+    line-height: 1.7;
+    color: $third-font-color;
+  }
+
+  &.rbc-off-range {
+    button {
+      opacity: 0.3;
+    }
+  }
+}

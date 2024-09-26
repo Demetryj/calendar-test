@@ -1,0 +1,30 @@
+@import '../../stylesUtils/variable.scss';
+
+.modal {
+  position: absolute;
+  padding: 25px;
+
+  background-color: $white-bg-color;
+
+  box-shadow: 0px 3px 18px #00000029;
+
+  border: 1px solid #43425d;
+  border-radius: 10px;
+
+  z-index: 100;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+
+  cursor: pointer;
+
+  & > svg {
+    width: 20px;
+    height: 20px;
+
+    color: #d6d6d6;
+  }
+}
