@@ -10,7 +10,7 @@ import './index.scss';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/calendar-test">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>
