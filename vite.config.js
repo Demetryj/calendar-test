@@ -8,14 +8,8 @@ export default defineConfig({
     sourcemap: true,
     base: '/calendar-test/',
   },
-  rollupOptions: {
-    output: {
-      assetFileNames: assetInfo => {
-        if (assetInfo.name?.endsWith('.css')) {
-          return './assets/[name]-[hash].[ext]'; // Измените на нужный вам путь
-        }
-        return '[name]-[hash].[ext]';
-      },
-    },
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
   },
 });
